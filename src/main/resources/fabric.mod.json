@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "worse-swimming",
+	"version": "${version}",
+	"name": "Worse Swimming",
+	"description": "What if swimming, but worse?",
+	"authors": [
+		"kevin@eorbit.net"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/worse-swimming/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.funkpla.WorseSwimming.WorseSwimmingMod"
+		],
+		"client": [
+		],
+		"modmenu": [
+			"net.funkpla.WorseSwimming.ModMenuConfig"
+		]
+	},
+
+	"mixins": [
+		"worse-swimming.mixins.json",
+		{
+			"config": "worse-swimming.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
